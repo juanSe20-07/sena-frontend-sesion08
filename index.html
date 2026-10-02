@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Tarjetas de Perfil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Generador de Tarjetas de Perfil</h1>
+        <p>Crea tarjetas de perfil dinámicamente con JavaScript</p>
+    </header>
+
+    <main>
+
+        <section class="formulario">
+            <h2>Crear perfil</h2>
+
+            <form id="formularioPerfil">
+
+                <label for="nombre">Nombre</label>
+                <input 
+                    type="text" 
+                    id="nombre" 
+                    placeholder="Ej: Juan Sebastián"
+                    required
+                >
+
+                <label for="cargo">Cargo</label>
+                <input 
+                    type="text" 
+                    id="cargo" 
+                    placeholder="Ej: Desarrollador Front-End"
+                    required
+                >
+
+                <label for="departamento">Departamento</label>
+                <input 
+                    type="text" 
+                    id="departamento" 
+                    placeholder="Ej: Tecnología"
+                    required
+                >
+
+                <label for="foto">URL de la foto (opcional)</label>
+                <input 
+                    type="text" 
+                    id="foto" 
+                    placeholder="https://... (vacío = avatar con iniciales)"
+                    inputmode="url"
+                >
+
+                <button type="submit">Generar tarjeta</button>
+
+            </form>
+        </section>
+
+        <section class="perfiles">
+
+            <div class="encabezado-perfiles">
+                <h2>Perfiles creados</h2>
+                <p>
+                    Tarjetas creadas:
+                    <span id="contador">0</span>
+                </p>
+            </div>
+
+            <div id="contenedorTarjetas" class="contenedor-tarjetas">
+                <!-- Las tarjetas se crean aquí con JavaScript -->
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
